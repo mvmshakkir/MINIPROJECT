@@ -1,0 +1,74 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+<html>
+    <head>
+        <title>
+            feedback
+        </title>
+    </head>
+    <style>
+        table.center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+            
+            
+        
+    .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .content-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+    .styled-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+</style>
+
+    <body>
+        <table class="content-table"  >
+            <tr>
+                <td>feedback id</td>
+                <td>feedback</td>
+                <td>date</td>
+                <td>rating</td>
+                <td>name</td>
+
+                
+            </tr>
+            {% for i in ok %}
+            <tr>
+                <td>{{i.feedback_id}}</td>
+                <td>{{i.feedback}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.rating}}</td>
+                <td>{{i.reg.user_name}}</td>
+            </tr>
+            {% endfor %}
+                </table>
+                </body>
+                </html>
+                {% endblock %}

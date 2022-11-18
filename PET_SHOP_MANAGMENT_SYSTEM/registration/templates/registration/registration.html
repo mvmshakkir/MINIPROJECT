@@ -1,0 +1,112 @@
+
+{% extends 'temp/main.html' %}
+{% block base %}
+
+
+<body>
+    <!-- //header -->
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="home">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- register  -->
+            <div class="modal-body mt-md-2 mt-5">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register Now</h3>
+                <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                    <!-- <div class="form-group">
+                        <label class="col-form-label">Profile picture</label>
+                        <input type="file" class="form-control" name='rimg'  required="">
+                    </div> -->
+                    <div class="form-group">
+                        <label class="col-form-label">first name</label>
+                        <input type="text" class="form-control" placeholder="your name" name="fn" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">last name</label>
+                        <input type="text" class="form-control" placeholder="your nane" name="ln" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="loremipsum@email.com" name="email" required="">
+                    </div>
+
+					<div class="form-group">
+                        <label class="col-form-label">date of birth</label>
+                        <input type="date" class="form-control" name='dob' required="">
+                    </div>
+
+			
+
+					<div class="form-group">
+                        <label class="col-form-label">place</label>
+                        <textarea name='place' class="form-control"  required=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Pin</label>
+                        <input type="number" class="form-control" name='phone' placeholder="like 7736656141"  required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">post</label>
+                        <input type="text" class="form-control" placeholder="your post" name="post" required="">
+                    </div>
+					<div class="form-group">
+                        <label class="col-form-label">Phone Number</label>
+                        <input type="number" class="form-control" name='pin' placeholder="like 7736656141"  required="">
+                    </div>
+
+
+					<div class="form-group">
+                        <label class="col-form-label">Gender</label><BR>
+						<input type="radio" name="gen" value="male"><label class="col-form-label">male</label><BR>
+
+						<input type="radio"  name="gen" value="female"><label class="col-form-label">female</label><BR>
+					  
+						<input type="radio" name="gen" value="other"><label class="col-form-label">others</label><BR>
+					  
+						</div>
+                        <div class="form-group">
+                            <label class="col-form-label">user name</label>
+                            <input type="text" class="form-control" placeholder="your name" name="sn" required="">
+                        </div>
+
+					
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" class="form-control" placeholder="*****" name="pw" required="">
+                    </div>
+                    <!-- <div class="form-group"> -->
+                        <!-- <label class="col-form-label">Confirm Password</label> -->
+                        <!-- <input type="password" class="form-control" class="form-control" placeholder="*****" name="pw" required=""> -->
+                    <!-- </div> -->
+                    <div class="sub-w3l my-3">
+                        <div class="sub-w3layouts_hub">
+                            <input type="checkbox" id="brand1" value="">
+                            <label for="brand1" class="text-li text-style-w3ls">
+                                <span></span>I Accept to the Terms &amp; Conditions</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn button-style-w3">Register</button>
+					<!-- hello {{n}} registration {{m}} -->
+                </form>
+            </div>
+            <!-- //register -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+    <!-- footer -->
+    
+    <!-- //footer -->
+    <!-- copyright -->
+    
+    <!-- //copyright -->
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center">
+        <span class="fa fa-angle-double-up" aria-hidden="true"></span>
+    </a>
+    <!-- //move top icon -->
+
+
+
+</body></html>
+{% endblock %}
